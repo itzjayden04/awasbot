@@ -101,6 +101,7 @@ AWASBOT follows the eight branches of the product blueprint.
    - **Auto-protection** (one switch per guard in the Protection centre, running in the background):
      - **Messages:** new WhatsApp, Telegram, SMS and email notifications are checked as they arrive.
      - **Chats on screen:** a small risk badge floats over the open WhatsApp, Telegram or Messenger chat and scores the person you are talking to.
+     - **WhatsApp Web on the phone:** WhatsApp Web opened in Chrome gets the same badge and pause card. AWASBOT checks the open chat as soon as the page opens and warns about a new scam message within about two seconds.
      - **Websites:** a scam page opened in Chrome, Samsung Internet, Firefox, Edge and other browsers is closed, with a "AWASBOT closed this page" screen.
      - **Calls:** risky callers get an "Answer carefully" warning and blocked numbers are rejected. AWASBOT never listens to calls.
      - **New apps and pictures:** newly installed apps and QR codes in new photos or screenshots are checked.
@@ -138,6 +139,8 @@ AWASBOT's built-in checks were measured with the network and AI switched off, on
 
 - **Held-out set (32 messages: 18 scam, 14 genuine, never used for tuning):** 100% precision (0 genuine messages flagged) and 66.7% recall (12 of 18 scams caught) at the "Suspicious" threshold.
 - **Tuning set (90 messages):** 100% precision and 96% recall. This is optimistic, because the rules were tuned on it.
+
+On WhatsApp Web, the page does not say who sent a message, so warnings name the chat "WhatsApp Web" rather than the contact.
 
 AWASBOT's verdicts are an aid, not a guarantee.
 
