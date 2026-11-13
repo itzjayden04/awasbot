@@ -70,9 +70,21 @@ No Android phone? See [Run AWASBOT on a Windows PC](docs/run-on-windows-emulator
 
 If something stops working after an update or restart, open AWASBOT once: the pill turns amber and shows which permission needs turning back on.
 
+## New in v1.5.0
+
+- **Fresh install: new app ID and its own online accounts.** AWASBOT is now `my.awasbot.app`, with accounts and the shared scam database in its own Firebase project (`awasbot-my`, data kept in Singapore). Uninstall any earlier build first, then make a new account: accounts, history and safe words from earlier builds don't carry over.
+- **WhatsApp Web protection.** WhatsApp Web opened in Chrome on the phone gets the same floating chat badge and pause card as the app, warning about a new scam message within about two seconds. A separate browser extension (`extension/`) brings the same warning to WhatsApp Web on a PC.
+- **New scam rules.** Catches fake bank-loan offers and "transfer me now" money requests.
+- **Usernames no longer reveal emails.** The username lookup used for login now stores your email sealed with your password, so nobody can look up a user's email from their username. If you reset your password by email, log in with your email once; username login works again after that.
+- **Emails from AWASBOT.** Verification and password-reset emails now come from "AWASBOT" (admin@awasbot-my.firebaseapp.com).
+- **Google sign-in on release builds.** Both the release and debug signing keys are registered, so "Continue with Google" works on the downloaded APK.
+- **VirusTotal on by default.** Links, websites and file fingerprints are checked against 70+ security companies in the released APK.
+- **Backup AI key.** A second Gemini key takes over when the first hits its daily limit.
+- **Correct version everywhere.** Settings and shared reports show the real app version.
+
 ## New in v1.4.0
 
-- **Kantoi is now AWASBOT.** New name and tagline, "Scam stops here.", across the app, notifications, reports and emails. Your account, history and safe words carry over: v1.4.0 installs as an update over Kantoi.
+- **New name: AWASBOT.** New name and tagline, "Scam stops here.", across the app, notifications, reports and emails.
 
 ## New in v1.3.0
 
